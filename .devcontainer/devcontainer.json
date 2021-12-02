@@ -1,1 +1,17 @@
-{}
+{
+	"name": "Nest web app",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { 
+			"NODE_VERSION": "14"
+		}
+	},
+	"forwardPorts": [
+		3000
+	],
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"ms-vscode-remote.remote-containers",
+		"esbenp.prettier-vscode"
+	]
+}
