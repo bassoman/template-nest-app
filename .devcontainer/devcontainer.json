@@ -2,12 +2,15 @@
 	"name": "Nest web app",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"args": { 
+		"args": {
 			"NODE_VERSION": "14"
 		}
 	},
 	"forwardPorts": [
 		3000
+	],
+	"mounts": [
+		"source=${localEnv:USERPROFILE},target=/data,type=bind,consistency=cached"
 	],
 	"extensions": [
 		"dbaeumer.vscode-eslint",
